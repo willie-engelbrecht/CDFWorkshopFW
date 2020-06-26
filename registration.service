@@ -1,0 +1,12 @@
+[Unit]
+Description=uWSGI instance to serve myproject
+After=network.target
+
+[Service]
+User=nginx
+Group=nginx
+WorkingDirectory=/opt/registration
+ExecStart=/usr/sbin/uwsgi --ini app.ini
+
+[Install]
+WantedBy=multi-user.target
