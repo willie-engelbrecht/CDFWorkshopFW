@@ -45,4 +45,5 @@ cat /root/.aws/config > /var/lib/nginx/.aws/config
 
 echo ""
 echo "You can now browse to: http://$(curl -s ipinfo.io/hostname):8080"
+echo "Remember to open up port 8080 for default-web in the AWS Console"
 echo ""
