@@ -1,5 +1,5 @@
 echo "Installing dependencies..."
-yum -y install unzip uwsgi.x86_64 uwsgi-plugin-python36.x86_64 python36-requests.noarch git
+yum -y install vim unzip uwsgi.x86_64 uwsgi-plugin-python36.x86_64 python36-requests.noarch git
 pip3 install flask
 
 cd /opt
@@ -9,6 +9,8 @@ mv CDFWorkshopFW registration
 cd /opt/registration
 cp registration.conf /etc/nginx/conf.d/registration.conf
 cp registration.service /etc/systemd/system/registration.service
+chown nginx:nginx -R /opt/registration/
+
 systemctl enable registration.service
 systemctl start registration.service
 sudo systemctl restart nginx
