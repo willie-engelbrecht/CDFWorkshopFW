@@ -4,6 +4,8 @@ Opens up the AWS firewall rules for a CDF workshop.
 
 
 # Usage
+* Step 1: please connect to the default-web machine spun up by the deployment script
+* Step 2: run the command below:
 ```
 sudo bash -c "$(curl -s https://raw.githubusercontent.com/willie-engelbrecht/CDFWorkshopFW/master/setup.sh)"
 ```
